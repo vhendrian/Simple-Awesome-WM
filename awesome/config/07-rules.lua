@@ -59,7 +59,7 @@ awful.rules.rules = {
     },
     { 
         rule_any = { type = { "dialog" } },
-        properties = { titlebars_enabled = true }
+        properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.

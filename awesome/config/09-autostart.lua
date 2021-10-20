@@ -8,6 +8,7 @@ do
         "xfce4-power-manager",
         --"light -S 30",
         "udiskie",
+        "nitrogen --restore",
     }
 
     for _, value in ipairs(cmds) do

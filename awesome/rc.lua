@@ -1,5 +1,8 @@
 local gfs = require("gears.filesystem")
 
+
+
+
 -- This is used later as the default terminal and editor to run.
 os.setlocale(os.getenv("LANG"))
 terminal   = os.getenv("TERMINAL") or "sakura"

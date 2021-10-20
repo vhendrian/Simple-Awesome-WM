@@ -16,7 +16,7 @@ myawesomemenu = {
 }
 
 local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
-local menu_terminal = { "open terminal", terminal }
+local menu_terminal = { "terminal", terminal }
 
 if has_fdo then
     mymainmenu = freedesktop.menu.build({

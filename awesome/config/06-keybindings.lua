@@ -3,6 +3,8 @@ local awful = require("awful")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.autofocus")
+local alttab = require("gobo.awesome.alttab")
+
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
@@ -79,6 +81,22 @@ globalkeys = gears.table.join(
             description = "increase brightness",
             group = "brightness",
         }),
+        
+     --gobo alttab
+        -- Switch windows
+   awful.key({ "Mod1" }, "Tab",
+      function()
+         alttab.switch(1, "Alt_L", "Tab", "ISO_Left_Tab")
+      end,
+      { description = "Switch between windows", group = "awesome" }
+   ),
+   awful.key({ "Mod1", "Shift" }, "Tab",
+      function()
+         alttab.switch(-1, "Alt_L", "Tab", "ISO_Left_Tab")
+      end,
+      { description = "Switch between windows backwards", group = "awesome" }
+   ),
+
 
 
     -- Layout manipulation

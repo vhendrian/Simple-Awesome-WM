@@ -4,11 +4,13 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
 
+
 --Widgets
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 
 
 
@@ -106,13 +108,13 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            net_speed_widget(),
+			net_speed_widget(),
+            ram_widget(),
             volume_widget(),
             brightness_widget{type = 'icon_and_text',program = 'light',step = 2,},
             batteryarc_widget({show_current_level = true,arc_thickness = 1,}),
             mytextclock,
-            s.mylayoutbox,
-            
+            s.mylayoutbox,            
             wibox.widget.systray()
         },
     }
