@@ -1,2 +1,4 @@
-# Dotfiles
- my personal dotfiles
+# simple awm dots
+ my awesome wm simple dotfiles
+ 
+ 
